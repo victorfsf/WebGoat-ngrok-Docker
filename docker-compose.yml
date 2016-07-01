@@ -1,0 +1,14 @@
+version: '2'
+services:
+  webgoat:
+    build: web
+    container_name: webgoat
+  ngrok:
+    build: ngrok
+    container_name: ngrok
+    volumes:
+      - ./.shared:/home/dev
+    env_file: .env
+    command: bash run.sh
+    depends_on:
+     - webgoat
