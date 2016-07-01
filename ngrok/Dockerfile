@@ -9,5 +9,3 @@ RUN apt-get update && \
 RUN useradd -ms /bin/bash dev
 USER dev
 WORKDIR /home/dev
-
-CMD ["ngrok", "http", "webgoat:8080"]
