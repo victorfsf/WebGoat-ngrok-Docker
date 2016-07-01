@@ -1,9 +1,11 @@
 version: '2'
 services:
   webgoat:
+    restart: always
     build: web
     container_name: webgoat
   ngrok:
+    restart: always
     build: ngrok
     container_name: ngrok
     volumes:
