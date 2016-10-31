@@ -19,5 +19,6 @@ $ docker-compose run selenium
 IPython:
 ```python
 In[1]: from firefox import driver
+
 In[2]: driver.get('http://webgoat:8080/WebGoat/')
 ```
