@@ -3,11 +3,9 @@ services:
   webgoat:
     restart: always
     build: ./web
-    container_name: webgoat
   ngrok:
     restart: always
     build: ngrok
-    container_name: ngrok
     volumes:
       - ./.shared:/home/dev
     env_file: .env
@@ -24,5 +22,3 @@ services:
     links:
       - display
       - webgoat
-    volumes:
-      - ./.scripts/:/home/dev/

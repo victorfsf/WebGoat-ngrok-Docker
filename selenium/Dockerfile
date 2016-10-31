@@ -21,5 +21,6 @@ RUN apt-get upgrade -y
 RUN pip install ipython ipdb selenium==2.53.6
 
 RUN useradd -ms /bin/bash dev
+ADD firefox.py /home/dev
 WORKDIR /home/dev
 USER dev
