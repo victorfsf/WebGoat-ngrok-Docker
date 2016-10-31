@@ -9,14 +9,15 @@ docker-compose up
 
 ## Selenium
 
-Added Selenium support through IPython with a hidden display
+Added Selenium support through IPython with a hidden browser display
 
 Shell:
 ```
-$ docker-compose run selenium ipython
+$ docker-compose run selenium
 ```
 
 IPython:
 ```python
 In[1]: from firefox import driver
+In[2]: driver.get('http://webgoat:8080/WebGoat/')
 ```
