@@ -1,6 +1,12 @@
 # WebGoat + ngrok + Docker
 Docker compose for building WebGoat with ngrok
 
+Running:
+```
+docker-compose build
+docker-compose up
+```
+
 ## Selenium
 
 Added Selenium support through IPython with a hidden display
