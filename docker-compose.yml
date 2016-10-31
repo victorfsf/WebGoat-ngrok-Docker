@@ -2,7 +2,7 @@ version: '2'
 services:
   webgoat:
     restart: always
-    build: web
+    build: ./web
     container_name: webgoat
   ngrok:
     restart: always
@@ -14,3 +14,15 @@ services:
     command: bash run.sh
     depends_on:
      - webgoat
+  display:
+    build: ./display
+    command: /usr/bin/Xvfb -ac -nolock :99
+    expose:
+      - '6099'
+  selenium:
+    build: ./selenium
+    links:
+      - display
+      - webgoat
+    volumes:
+      - ./.scripts/:/home/dev/

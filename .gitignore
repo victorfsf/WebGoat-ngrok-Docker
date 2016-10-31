@@ -1,2 +1,4 @@
 .env
 .shared/.ngrok2/**
+.scripts/**
+!.scripts/firefox.py
